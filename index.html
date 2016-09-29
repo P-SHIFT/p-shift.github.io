@@ -5,5 +5,14 @@ layout: default
   <h1>Creative App Development: My Personal Case Study</h1>
 
   <p>
-      This is a test website.
+      This is a list of blog entries:
   </p>
+  
+  <ul>
+    {% for post in site.posts %}
+    <li>
+	  <a href="{{post.url}}">{{post.title}}</a>
+	  <p>{{post.meta}}</p>
+	</li>
+	{% endfor %}
+  </ul>
